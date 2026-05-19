@@ -18,7 +18,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <h1 className="title">🐍 Snake</h1>
+      <h1 className="title">🐍 Snake 🐍</h1>
 
       <Score score={score} highScore={highScore} level={level} />
 
