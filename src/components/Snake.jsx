@@ -1,18 +1,28 @@
-import { BOARD_SIZE } from '../constants/gameConfig';
+const CELL = 32; 
 
 export default function Snake({ positions }) {
   return (
     <>
-      {positions.map((seg, index) => (
-        <div
-          key={`${seg.x}-${seg.y}-${index}`}
-          className={`snake-segment ${index === 0 ? 'snake-head' : ''}`}
-          style={{
-            gridColumn: seg.x + 1,
-            gridRow:    seg.y + 1,
-          }}
-        />
-      ))}
+      {positions.map((seg, index) => {
+        const isHead = index === 0;
+        return (
+          <div
+            key={`${seg.x}-${seg.y}-${index}`}
+            className={`snake-segment ${isHead ? 'snake-head' : ''}`}
+            style={{
+              left: seg.x * CELL + 2,
+              top:  seg.y * CELL + 4,
+            }}
+          >
+            {isHead && (
+              <>
+                <div className="eye" />
+                <div className="eye" />
+              </>
+            )}
+          </div>
+        );
+      })}
     </>
   );
 }

@@ -1,11 +1,16 @@
+const CELL = 32;
+
 export default function Food({ position }) {
   return (
     <div
-      className="food"
+      className="food-wrapper"
       style={{
-        gridColumn: position.x + 1,
-        gridRow:    position.y + 1,
+        left: position.x * CELL,
+        top:  position.y * CELL,
       }}
-    />
+    >
+      <div className="food-leaf" />
+      <div className="food-body" />
+    </div>
   );
 }
