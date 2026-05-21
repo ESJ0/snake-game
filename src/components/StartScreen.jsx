@@ -17,7 +17,7 @@ export default function StartScreen({ status, score, onStart }) {
           </>
         )}
         <button className="btn-start" onClick={onStart}>
-          {isGameOver ? '🔄 Jugar de nuevo' : '▶ Iniciar juego'}
+          {isGameOver ? 'Jugar de nuevo' : '▶ Iniciar juego'}
         </button>
       </div>
     </div>

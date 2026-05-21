@@ -1,0 +1,35 @@
+# Dependencias
+node_modules
+npm-debug.log*
+
+# Build local
+dist
+
+# Variables de entorno reales
+.env
+.env.local
+.env.*.local
+
+# Editor
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml
+nginx.conf
+
+# README
+README.md
